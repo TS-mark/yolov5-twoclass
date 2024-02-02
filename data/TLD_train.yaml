@@ -1,0 +1,18 @@
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+train: ../../datasets/TLD_train7/test.txt
+test: ../../datasets/TLD_train7/test.txt
+val: ../../datasets/TLD_train7/test.txt
+
+# number of classes
+nc: 50
+nc1: 5
+nc2: 10
+ncs: [nc1, nc2]
+
+# class names
+names: ['GO', 'GO9', 'G<', 'G<9', 'G>', 'G>9', 'G^', 'G^9', 'RO', 'RO9', 'R<', 'R<9', 'R>', 'R>9', 'R^', 'R^9', 'YO', 'YO9', 'Y<', 'Y<9', 'Y>', 'Y>9', 'Y^', 'Y^9', 'B', 'R', 'G', 'Y', '9', 'Rpedestrian', 'Gpedestrian', 'Ypedestrian', 'Rbicycle', 'Gbicycle', 'Ybicycle', 'pass', 'passx', 'pass<', 'pass>', 'GA', 'RA', 'YA', 'R^<', 'G^<', 'R^>', 'G^>', 'G<A', 'R<A', 'Gothers', 'Rothers']
+names1: ['R', 'G', 'Y', 'B', 'others']
+names2: ['O', '<', '>', '^', 'A','pedestrian', '^<', '^>', 'pass ', 'others']
+
+lb1: [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 3, 0, 1, 2, 4, 0, 1, 2, 0, 1, 2, 1, 0, 1, 1, 1, 0, 2, 0, 1, 0, 1, 1, 0, 1, 0]
+lb2: [0, 0, 1, 1, 2, 2, 3, 3, 0, 0, 1, 1, 2, 2, 3, 3, 0, 0, 1, 1, 2, 2, 3, 3, 9, 9, 9, 9, 9, 5, 5, 5, 9, 9, 9, 8, 8, 8, 8, 4, 4, 4, 6, 6, 7, 7, 9, 9, 9, 9]
